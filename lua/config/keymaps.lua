@@ -23,3 +23,9 @@ end)
 vim.keymap.set("n", "<C-s>", function()
   ui.nav_file(4)
 end)
+
+-- save file
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+-- quit all
+vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
