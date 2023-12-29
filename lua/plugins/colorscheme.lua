@@ -1,33 +1,26 @@
 return {
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    priority = 1000,
-    config = function()
-      return {
-        require("rose-pine").setup({
-          variant = "auto",
-          dark_variant = "main",
+    "folke/tokyonight.nvim",
 
-          disable_background = true,
-          disable_nc_background = true,
-          disable_float_background = true,
-          disable_italics = true,
-
-          groups = {
-            -- background = "pine", --"#133340", --"#255159",
-            -- panel = "surface",   -- "#133340",
-            border = "pine", --"pine",
-          },
-        }),
-      }
-    end,
+    opts = {
+      -- transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "tokyonight",
+    },
+  },
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      background_colour = "#000000",
     },
   },
 }
