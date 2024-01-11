@@ -8,11 +8,11 @@ return {
         require("rose-pine").setup({
           variant = "auto",
           dark_variant = "main",
-
-          disable_background = true,
-          disable_nc_background = true,
-          disable_float_background = true,
-          disable_italics = true,
+          styles = {
+            bold = true,
+            italic = false,
+            transparency = true,
+          },
 
           groups = {
             -- background = "pine", --"#133340", --"#255159",
