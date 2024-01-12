@@ -8,3 +8,6 @@ opt.clipboard = "unnamedplus"
 
 -- Fix markdown indentation
 vim.g.markdown_recommended_style = 0
+
+-- Autoformat files
+vim.g.autoformat = false
