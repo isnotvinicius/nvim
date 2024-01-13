@@ -11,3 +11,18 @@ vim.g.markdown_recommended_style = 0
 
 -- Autoformat files
 vim.g.autoformat = false
+
+vim.opt.nu = false
+vim.opt.relativenumber = true
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.opt.smartindent = true
+
+vim.opt.incsearch = true
+
+vim.opt.termguicolors = true
+
