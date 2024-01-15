@@ -10,7 +10,7 @@ opt.clipboard = "unnamedplus"
 vim.g.markdown_recommended_style = 0
 
 -- Autoformat files
-vim.g.autoformat = false
+vim.g.autoformat = true
 
 vim.opt.nu = false
 vim.opt.relativenumber = true
