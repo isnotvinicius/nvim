@@ -1,23 +1,19 @@
 return {
+  -- add night owl theme
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-      require("rose-pine").setup({
-        variant = "moon",
-        dark_variant = "moon",
-        styles = {
-          bold = true,
-          italic = false,
-          transparency = false,
-        },
-      })
-    end,
+    "oxfist/night-owl.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      italics = false,
+    },
   },
+
   {
     "LazyVim/LazyVim",
+    lazy = true,
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "night-owl",
     },
   },
 }
