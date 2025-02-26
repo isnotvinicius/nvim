@@ -1,0 +1,16 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.editor.harpoon2",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.php",
+    "lazyvim.plugins.extras.lang.svelte",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.util.gitui",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
+  ],
+  "install_version": 8,
+  "news": {
+    "NEWS.md": "10960"
+  },
+  "version": 8
+}
