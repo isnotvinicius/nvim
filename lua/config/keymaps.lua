@@ -42,6 +42,9 @@ keymap.set({ "n", "i" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 -- Quit all without saving
 keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit without saving" })
 
+-- Quit
+keymap.set("n", "<leader>k", ":q<Return>", { desc = "Quit window without forcing" })
+
 -- Harpoon
 local harpoon = require("harpoon")
 harpoon:setup()
