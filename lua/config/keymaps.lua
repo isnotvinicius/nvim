@@ -34,7 +34,7 @@ keymap.set("n", "sj", "<C-w>j")
 keymap.set("n", "sl", "<C-w>l")
 
 -- Open explorer
-keymap.set("n", "<leader>pv", vim.cmd.Ex)
+keymap.set("n", "<leader>po", vim.cmd.Ex)
 
 -- Save file
 keymap.set({ "n", "i" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
