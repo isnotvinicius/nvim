@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-  color = color or "tokyonight"
+  color = color or "rose-pine"
   vim.cmd.colorscheme(color)
 
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -54,6 +54,18 @@ return {
       })
 
       ColorMyPencils()
+    end,
+  },
+
+  {
+    "craftzdog/solarized-osaka.nvim",
+    name = "solarized-osaka",
+    lazy = true,
+    priority = 1000,
+    opts = function()
+      return {
+        transparent = true,
+      }
     end,
   },
 }

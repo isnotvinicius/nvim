@@ -5,6 +5,16 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Neotree
+keymap.set(
+  "n",
+  "<leader>e",
+  ":Neotree source=filesystem reveal=true position=right<Return>",
+  { desc = "Opens neotree file explorer" }
+)
+
+keymap.set("n", "<leader>r", ":Neotree close<Return>", { desc = "Closes neotree" })
+
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
