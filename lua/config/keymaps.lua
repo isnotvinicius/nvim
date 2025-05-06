@@ -5,15 +5,25 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Neotree
-keymap.set(
-  "n",
-  "<leader>e",
-  ":Neotree source=filesystem reveal=true position=right<Return>",
-  { desc = "Opens neotree file explorer" }
-)
+-- Move code blocks up and down
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-keymap.set("n", "<leader>r", ":Neotree close<Return>", { desc = "Closes neotree" })
+-- Keep cursor on mid screen while jumping up and down
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u", "<C-u>zz")
+
+-- Keep highlighted search term found in the middle of the screen
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+
+-- Keeps copied code into buffer
+keymap.set("x", "<leader>p", "\"_dP")
+
+-- Copies things to system clipboard
+keymap.set("n", "<leader>y", "\"+y")
+keymap.set("v", "<leader>y", "\"+y")
+keymap.set("n", "<leader>Y", "\"+y")
 
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
@@ -66,8 +76,3 @@ end)
 keymap.set("n", "<C-e>", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end)
-
--- Diagnostics
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
